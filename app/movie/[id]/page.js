@@ -3,15 +3,21 @@ import MoveDetail from '@/components/movie/movie_detail'
 import { notFound } from 'next/navigation'
 import React from 'react'
 
+ async function delay(number){
+  setTimeout(()=>{
 
+  },number)
+
+ }
 
 const Page = async({params}) => {
+  await delay(5000)
  
   const movie=await getMovieById(params.id)
-  if(!movie.succes){
+  if(movie.success===false){
     notFound();
   }
-  console.log(movie)
+  
   return (
     <div >
       <MoveDetail movie={movie}/>

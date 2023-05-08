@@ -1,10 +1,10 @@
-"use client"
+
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+
 import React from 'react'
 
 const Header = () => {
-    const router=useRouter();
+  /*   const router=useRouter(); */
     const menus=[
         {
             name:'About',
@@ -23,9 +23,9 @@ const Header = () => {
   return (
    
     
-    <div className='flex items-center gap-6 h-20 p-5 bg-slate-900 bg-opacity-50' >
+    <div className='flex items-center gap-6 h-20 p-5 bg-slate-700 ' >
         
-        <div className='bg-red-500 px-4 py-2 text-2xl font-bold text-white cursor-pointer' onClick={()=>router.push(`/`)}>MFilm </div>
+        <div className='bg-red-500 px-4 py-2 text-2xl font-bold text-white cursor-pointer' ><Link href="/" legacyBehavior ><a>MFilm</a></Link> </div>
         <div className='flex flex-1 items-center '> </div>
         <div  className='mx-5'>
             {

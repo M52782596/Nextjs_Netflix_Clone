@@ -1,12 +1,11 @@
-import Footer from '@/components/footer'
-import Header from '@/components/header'
+
 import React from 'react'
 
 
 const Layout = ({children}) => {
   return (
   
-    <div>
+    <div className='h-full w-full'>
     {children}
     </div>
    

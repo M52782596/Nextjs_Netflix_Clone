@@ -11,17 +11,15 @@ export  async function getCategories(page=1){
       }
 }
 
-export async function getCategoryName(genre_id){
-    if(!genre_id){
-        return null;
-    }
-    try{
-        
-      }catch(error){
-          throw new Error("genre list error",error)
-      }
-    
+export const getCategoryName=async(genreId,page=1)=>{
+   const categories=await fetch(`${BASE_PATH}/genre/movie/list?api_key=${API_KEY}&page=${page}`);
+   const res=await categories.json();
+   const genres=await res.genres;
+   const genre=await genres.find((g)=>g.id===parseInt(genreId));
+   
+   return genre
 }
+
 
 
 

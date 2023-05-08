@@ -8,7 +8,9 @@ const MovieList = ({movies=[], title}) => {
   return (
     <div>
         <h5 className='my-3 px-4 py-5 font-bold bg-slate-950'> {title}</h5>
-    <div className='flex items-center justify-center gap-3 flex-wrap '>
+
+      
+    <div className=' ml-5 mr-5 flex items-center  gap-4 flex-wrap'>
          
        
         {
@@ -31,6 +33,7 @@ const MovieList = ({movies=[], title}) => {
 
     </div>
     </div>
+   
   )
 }
 

@@ -1,7 +1,8 @@
 "use client"
+import Link from 'next/link'
 import React from 'react'
 
-const PageError = () => {
+const MoviePage404 = () => {
   return (
     <div
       style={{
@@ -23,4 +24,4 @@ const PageError = () => {
   )
 }
 
-export default PageError
+export default MoviePage404
